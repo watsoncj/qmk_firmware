@@ -66,7 +66,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 enum function_id {
     SHIFT_ESC,
-    BREATHING_TOGGLE,
     BREATHING_ENABLE,
     BREATHING_DISABLE,
 };
@@ -74,11 +73,10 @@ enum function_id {
 const uint16_t PROGMEM fn_actions[] = {
   [0]  = ACTION_FUNCTION(SHIFT_ESC),
   [1]  = ACTION_BACKLIGHT_STEP(),
-  [2]  = ACTION_FUNCTION(BREATHING_TOGGLE),
-  [3]  = ACTION_FUNCTION(BREATHING_ENABLE),
-  [4]  = ACTION_FUNCTION(BREATHING_DISABLE),
-  [5]  = ACTION_BACKLIGHT_INCREASE(),
-  [6]  = ACTION_BACKLIGHT_DECREASE(),
+  [2]  = ACTION_FUNCTION(BREATHING_ENABLE),
+  [3]  = ACTION_FUNCTION(BREATHING_DISABLE),
+  [4]  = ACTION_BACKLIGHT_INCREASE(),
+  [5]  = ACTION_BACKLIGHT_DECREASE(),
 };
 
 void action_function(keyrecord_t *record, uint8_t id, uint8_t opt) {
@@ -104,11 +102,7 @@ void action_function(keyrecord_t *record, uint8_t id, uint8_t opt) {
         }
       }
       break;
-    case BREATHING_TOGGLE:
-      breathing_toggle();
-      break;
     case BREATHING_ENABLE:
-      breathing_intensity_set(1);
       breathing_enable();
       break;
     case BREATHING_DISABLE:
