@@ -53,6 +53,7 @@ OPT_DEFS += -DBOOTLOADER_SIZE=4096
 # Build Options
 #   change yes to no to disable
 #
+RGBLIGHT_ENABLE ?= no
 BOOTMAGIC_ENABLE ?= yes      # Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE ?= yes       # Mouse keys(+4700)
 EXTRAKEY_ENABLE ?= yes       # Audio control and System control(+450)
