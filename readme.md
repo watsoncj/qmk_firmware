@@ -96,6 +96,10 @@ In every keymap folder, the following files are recommended:
 * `Makefile` - the features of QMK that are enabled, required to run `make` in your keymap folder
 * `readme.md` - a description of your keymap, how others might use it, and explanations of features 
 
+# Quick Start
+
+    make keyboard=gh60 keymap=watsoncj dfu
+
 ## The `make` command
 
 The `make` command is how you compile the firmware into a .hex file, which can be loaded by a dfu programmer (like dfu-progammer via `make dfu`) or the [Teensy loader](https://www.pjrc.com/teensy/loader.html) (only used with Teensys). You can run `make` from the root (`/`), your keyboard folder (`/keyboards/<keyboard>/`), or your keymap folder (`/keyboards/<keyboard>/keymaps/<keymap>/`) if you have a `Makefile` there (see the example [here](/doc/keymap_makefile_example.mk)).
