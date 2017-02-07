@@ -24,14 +24,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    You
+#define MANUFACTURER    watsoncj
 #define PRODUCT         kc60v2
-#define DESCRIPTION     A custom keyboard
+#define DESCRIPTION     60% keyboard by watsoncj
 
 /* key matrix size */
 #define MATRIX_ROWS 5
 #define MATRIX_COLS 14
 
+#define BACKLIGHT_BREATHING
 /*
  * Keyboard Matrix Assignments
  *
