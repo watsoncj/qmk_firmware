@@ -8,10 +8,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TAB, Q,   W,   E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSLS, \
         LCTRL,A,   S,   D,   F,   G,   H,   J,   K,   L,   SCLN,QUOT,NO,  ENT,  \
         LSFT,NO, Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,NO, RSFT, \
-        FN0,LALT,LGUI,          SPC,                RGUI,RALT,RCTRL,FN1, FN1),
+        FN0,LALT,LGUI,          SPC,                RGUI,RALT,NO,RCTRL, NO),
     /* 1: fn */
     KEYMAP(
-        GRV,  F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, TRNS, \
+        GRV,  F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, DEL, \
         TRNS,TRNS,UP,  TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,LEFT,DOWN,UP,RGHT,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,VOLD,VOLU,MPRV,MNXT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
@@ -27,7 +27,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM fn_actions[] = {
     [0] = ACTION_LAYER_MOMENTARY(1),  // to Fn overlay
-    [1] = ACTION_LAYER_TOGGLE(2),     // toggle arrow overlay
+    [1] = ACTION_LAYER_MOMENTARY(2),     // toggle arrow overlay
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
