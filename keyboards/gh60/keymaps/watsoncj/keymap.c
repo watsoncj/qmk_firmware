@@ -15,7 +15,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TRNS,TRNS,UP,  TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
         TRNS,LEFT,DOWN,RGHT,TRNS,TRNS,LEFT,DOWN,UP,RGHT,TRNS,TRNS,TRNS,TRNS, \
         TRNS,TRNS,VOLD,VOLU,MPRV,MNXT,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
-        TRNS,TRNS,TRNS,          MPLY,               TRNS,TRNS,TRNS,TRNS,TRNS),
+        TRNS,TRNS,TRNS,          MPLY,               TRNS,HOME,END,PGUP,PGDN),
     /* 2: arrows */
     KEYMAP(
         TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS,TRNS, \
@@ -49,7 +49,7 @@ void matrix_scan_user(void) {
 
 //Layer LED indicators
     uint32_t layer = layer_state;
-	
+
     if (layer & (1<<1)) {
         gh60_wasd_leds_on();
         gh60_fn_led_on();
@@ -57,7 +57,7 @@ void matrix_scan_user(void) {
         gh60_wasd_leds_off();
         gh60_fn_led_off();
     }
-	
+
     if (layer & (1<<2)) {
         gh60_poker_leds_on();
         gh60_esc_led_on();
@@ -65,5 +65,5 @@ void matrix_scan_user(void) {
         gh60_poker_leds_off();
         gh60_esc_led_off();
     }
-	
+
 };
